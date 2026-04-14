@@ -295,3 +295,68 @@ footer span {
         list-style: none;
     }
 }
+
+/* ========================= */
+/* 🔐 LOGIN (ADICIONADO) */
+/* ========================= */
+
+button[onclick="abrirLogin()"] {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[onclick="abrirLogin()"]:hover {
+    background-color: #f6121d;
+}
+
+#loginModal {
+    backdrop-filter: blur(8px);
+}
+
+#loginModal > div {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.9);
+}
+
+#loginModal input {
+    background: #333;
+    border: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+#loginModal button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#loginModal button:hover {
+    background-color: #f6121d;
+}
+
+#msg {
+    color: #e50914;
+}
