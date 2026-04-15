@@ -198,7 +198,7 @@ footer {
 
 @media (max-width: 768px) {
 
-    h1 {
+     h1 {
         font-size: 1.5rem;
     }
 
@@ -206,34 +206,33 @@ footer {
         flex-direction: column;
     }
 
-    .busca-site input,
-    .busca-site button {
+    .busca-site input {
         width: 90%;
+    }
+
+    .busca-site button {
+        width: 50%;
     }
 
     /* CAIXAS CENTRALIZADAS */
+    
     .caixas {
-        justify-content: center;
+        grid-template-columns: 1fr;
     }
 
     .caixa {
-        width: 90%;
-        height: auto;
+        max-width: 90%;
+        height: 380px;
     }
 
     /* 🔥 OPÇÕES PERFEITAS NO CELULAR */
     .opcoes {
         flex-direction: column;
         align-items: center;
-        gap: 8px;
-        padding: 10px;
     }
 
     .opcoes div {
         width: 90%;
-        max-width: 260px;
-        height: 60px;
-        padding: 8px;
     }
 
     .opcoes a {
