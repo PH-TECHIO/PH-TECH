@@ -1,10 +1,19 @@
 @charset "UTF-8";
+
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+body {
+    background-image: url(../imagens/plano\ 2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* ===== MAIN ===== */
 main {
     background-color: rgba(255, 255, 255, 0.247);
     border-radius: 20px;
@@ -17,6 +26,7 @@ main {
     margin: auto;
 }
 
+/* ===== BUSCA ===== */
 .busca-site {
   display: flex;
   justify-content: center;
@@ -60,55 +70,44 @@ main {
   transform: scale(1.05);
 }
 
-body {
-    background-image: url(../imagens/plano\ 2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-x: hidden;
-}
-
+/* ===== TEXTOS ===== */
 p {
     color: white;
     text-align: justify;
 }
-ul{
+
+ul {
     text-align: center;
 }
-li{
+
+li {
     color: white;
     font-family: "VT323", monospace, arial, sans-serif;
     text-align: center;
     list-style-position: inside;
 }
+
+/* ===== TÍTULOS ===== */
 h1 {
     color: white;
     text-align: center;
-    text-decoration:none;
     font-size: 40px;
     padding: 20px;
 }
-h2 {
+
+h2, h3, h4 {
     color: white;
     text-align: center;
 }
 
-h3 {
-    color: white;
-    text-align: center;
-}
-
-h4 {
-    color: white;
-    text-align: center;
-}
-
+/* ===== IMAGENS (MANTÉM ORIGINAL NO PC) ===== */
 img {
-    align-items: center;
     width: 180px;
     height: 180px;
 }
 
-a{
+/* ===== LINKS ===== */
+a {
     color: white;
     text-decoration: none;
 }
@@ -118,6 +117,7 @@ a:hover {
     color: rgb(34, 182, 71);
 }
 
+/* ===== AJUSTES DE LAYOUT EXISTENTE ===== */
 div.media {
     margin: -282px -388px 0px 10px;
     padding: 0px;
@@ -135,78 +135,78 @@ div.caixa > img {
     height: 150px;
 }
 
+/* ===== VÍDEO (MANTÉM ORIGINAL NO PC) ===== */
 div.video {
     max-width: 100%;
     margin: 0 auto;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
+    height: auto;
 }
 
 div.video iframe {
-    position: static;
-    top: 0;
-    left: 0;
     width: 500px;
     height: 360px;
 }
 
-/* ========================= */
-/* 📱 RESPONSIVO */
-/* ========================= */
-
-@media (max-width: 1024px) {
-    .caixas {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
+/* ===== RESPONSIVIDADE (SÓ CELULAR) ===== */
 @media (max-width: 768px) {
 
-    h1 {
-        font-size: 1.5rem;
-    }
+  h1 {
+    font-size: 22px;
+    padding: 15px;
+    margin: 0;
+  }
 
-    .busca-site {
-        flex-direction: column;
-    }
+  p {
+    font-size: 16px;
+  }
 
-    .busca-site input {
-        width: 90%;
-    }
+  .busca-site {
+    flex-direction: column;
+    gap: 8px;
+    max-width: 90%;
+  }
 
-    .busca-site button {
-        width: 50%;
-    }
+  .busca-site input[type="text"],
+  .busca-site button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
 
-    .opcoes {
-        flex-direction: column;
-        align-items: center;
-    }
+  div {
+    font-size: 20px;
+  }
 
-    .opcoes div {
-        width: 90%;
-    }
+  /* IMAGENS RESPONSIVAS NO CELULAR */
+  img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
 
-    .caixas {
-        grid-template-columns: 1fr;
-    }
+  div.caixa > img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+  }
 
-    .caixa {
-        max-width: 90%;
-        height: 380px;
-    }
+  /* VÍDEO RESPONSIVO NO CELULAR */
+  div.video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
 
-    .caixa img {
-        height: 75%;
-    }
+  /* CORRIGIR MARGENS QUE QUEBRAM NO CELULAR */
+  div.media {
+    margin: 0;
+    max-width: 100%;
+  }
 
-    .titulo {
-        font-size: 18px;
-    }
+  div.tera {
+    margin-right: 0;
+  }
 
-    li {
-        text-align: center;
-        list-style: none;
-    }
 }
