@@ -1,8 +1,14 @@
-
+@charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* FUNDO */
 body {
     background-image: url(../imagens/plano\ 2.jpg);
     background-size: cover;
@@ -10,6 +16,7 @@ body {
     overflow-x: hidden;
 }
 
+/* BUSCA */
 .busca-site {
   display: flex;
   justify-content: center;
@@ -53,32 +60,30 @@ body {
   transform: scale(1.05);
 }
 
+/* MAIN (RESPONSIVO SEM QUEBRAR PC) */
 main {
     background-color: rgba(255, 255, 255, 0.247);
     box-shadow: 3px 3px 15px rgba(60, 100, 136, 0.692);
-    width: 1700px;
-    height: auto;
+    max-width: 1700px; /* antes era width fixo */
+    width: 95%;
     padding: 10px;
-    margin: auto;
+    margin: 35px auto;
     border-radius: 5px;
-    margin-top: 35px;
 }
 
-header {
-    margin: 10px;
-    padding: 0px;
-}
-
+/* TEXTOS */
 p {
     font-size: 20px;
     text-align: center;
 }
+
 h1 {
     font-family: "DM Serif Display", Arial, sans-serif;
     text-align: center;
     color: white;
-}     
+}
 
+/* LINKS */
 div > a {
     color: white;
     text-decoration: none;
@@ -89,6 +94,7 @@ div a:hover {
     text-decoration-color: white;
 }
 
+/* TEXTO HOVER */
 div > p {
     display: none;
 }
@@ -101,28 +107,11 @@ div:hover > p {
     font-size: 20px;
 }
 
-div {
-    font-size: 32px;
-}
-
-div > h3 {
-    text-align: center;
-    margin: auto;
-    color: white;
-    text-decoration: none;
-}
-
-div > h3:hover {
-    text-decoration: underline;
-    text-decoration-color: white;
-}
-
-
+/* CAIXAS */
 div.caixas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center; /* corrigido */
     margin-top: 50px;
     gap: 20px;
 }
@@ -136,9 +125,8 @@ div.caixa{
     padding: 10px;
     text-align: center;
     font-size: 20px;
-    box-sizing: border-box;
     transition: all 0.3s ease;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 div.caixa:hover {
@@ -147,7 +135,7 @@ div.caixa:hover {
     text-decoration: underline;
 }
 
-
+/* MENU OPÇÕES */
 .opcoes {
     display: flex;
     flex-wrap: wrap;
@@ -159,7 +147,7 @@ div.caixa:hover {
 
 .opcoes div {
     background-color: #222;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
     width: 230px;
     height: 80px;
@@ -177,14 +165,13 @@ div.caixa:hover {
 }
 
 .opcoes a {
-    text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-family: "DM Serif Display", sans-serif;
     font-size: 1rem;
 }
 
-
+/* FOOTER */
 footer {
     text-align: center;
     margin-top: 164px;
@@ -194,17 +181,18 @@ footer {
     border-radius: 10px;
 }
 
-footer span {
-    font-weight: bold;
-}
-
 /* ========================= */
 /* 📱 RESPONSIVO */
 /* ========================= */
 
 @media (max-width: 1024px) {
-    .caixas {
-        grid-template-columns: repeat(2, 1fr);
+
+    main {
+        width: 95%;
+    }
+
+    .caixa {
+        width: 45%;
     }
 }
 
@@ -218,42 +206,37 @@ footer span {
         flex-direction: column;
     }
 
-    .busca-site input {
+    .busca-site input,
+    .busca-site button {
         width: 90%;
     }
 
-    .busca-site button {
-        width: 50%;
+    /* CAIXAS CENTRALIZADAS */
+    .caixas {
+        justify-content: center;
     }
 
+    .caixa {
+        width: 90%;
+        height: auto;
+    }
+
+    /* 🔥 OPÇÕES PERFEITAS NO CELULAR */
     .opcoes {
         flex-direction: column;
         align-items: center;
+        gap: 8px;
+        padding: 10px;
     }
 
     .opcoes div {
         width: 90%;
+        max-width: 260px;
+        height: 60px;
+        padding: 8px;
     }
 
-    .caixas {
-        grid-template-columns: 1fr;
-    }
-
-    .caixa {
-        max-width: 90%;
-        height: 380px;
-    }
-
-    .caixa img {
-        height: 75%;
-    }
-
-    .titulo {
-        font-size: 18px;
-    }
-
-    li {
-        text-align: center;
-        list-style: none;
+    .opcoes a {
+        font-size: 0.85rem;
     }
 }
