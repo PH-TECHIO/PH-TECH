@@ -146,40 +146,48 @@ a:hover {
 }
 
 /* ========================= */
-/* 🔧 OPÇÕES */
+/* 🔘 MENU OPÇÕES */
 /* ========================= */
 
 .opcoes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 6px;
-    margin: 20px auto;
-    padding: 5px;
+    gap: 10px;
+    margin: 30px auto;
+    padding: 10px;
 }
 
 .opcoes div {
     background-color: #222;
-    padding: 15px 52px;
-    border-radius: 8px;
-    max-width: 250px;
-    max-height: none;
+    padding: 10px;
+    border-radius: 12px;
+
+    width: 220px;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
     transition: 0.3s;
 }
 
 .opcoes div:hover {
     background-color: #333;
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .opcoes a {
+    text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-family: "DM Serif Display", sans-serif;
-    font-size: 14px;
-}
 
+    font-size: 15px;
+    line-height: 1.2;
+}
 /* PAGINAÇÃO */
 .paginacao {
     display: flex;
@@ -238,7 +246,7 @@ footer {
     }
 
     .busca-site button {
-        width: 60%;
+        width: 50%;
     }
 
     .opcoes {
@@ -256,11 +264,19 @@ footer {
 
     .caixa {
         max-width: 90%;
-        height: 350px;
+        height: 380px;
     }
 
     .caixa img {
-        height: 80%; /* também maior no mobile */
-        object-fit: scale-down;
+        height: 75%;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    li {
+        text-align: center;
+        list-style: none;
     }
 }
