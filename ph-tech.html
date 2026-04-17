@@ -122,6 +122,21 @@
 <!-- BOTÃO LOGIN -->
 <button id="btnLogin" onclick="abrirLogin()">Entrar</button>
 
+  <div id="modalLogin" class="modal">
+  <div class="modal-content">
+    <h2>Entrar ou Criar Conta</h2>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="senha" placeholder="Senha">
+
+    <button onclick="login()">Entrar</button>
+    <button onclick="criarConta()">Criar Conta</button>
+    <button onclick="loginGoogle()">Entrar com Google</button>
+
+    <button onclick="fecharLogin()">Fechar</button>
+  </div>
+</div>
+  
     <p id="msg" style="color:red;"></p>
 
   </div>
@@ -200,21 +215,6 @@
     </main> 
 
   <footer> &copy; Site Desenvolvido por: <span>Pedro Henrique.</span> Todos os Direitos Reservados</footer>
-
-    <div id="modalLogin" class="modal">
-  <div class="modal-content">
-    <h2>Entrar ou Criar Conta</h2>
-
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="senha" placeholder="Senha">
-
-    <button onclick="login()">Entrar</button>
-    <button onclick="criarConta()">Criar Conta</button>
-    <button onclick="loginGoogle()">Entrar com Google</button>
-
-    <button onclick="fecharLogin()">Fechar</button>
-  </div>
-</div>
 
     <!-- 🔥 FIREBASE SCRIPT -->
 <script type="module">
